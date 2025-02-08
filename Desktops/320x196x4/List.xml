@@ -1,0 +1,6 @@
+<CiscoIPPhoneImageList>
+    <ImageItem Image="TFTP:Desktops/320x196x4/ubuntu-tn.png"
+       URL="TFTP:Desktops/320x196x4/ubuntu.png"/>
+    <ImageItem Image="TFTP:Desktops/320x196x4/tux-tn.png"
+       URL="TFTP:Desktops/320x196x4/tux.png"/>
+</CiscoIPPhoneImageList>

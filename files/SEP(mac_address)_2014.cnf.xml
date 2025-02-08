@@ -1,0 +1,177 @@
+<device>
+    <deviceProtocol>SIP</deviceProtocol>
+    <sshUserId>admin</sshUserId>
+    <sshPassword>admin</sshPassword>
+    <ipAddressMode>0</ipAddressMode>
+
+    <devicePool>
+        <dateTimeSetting>
+            <dateTemplate>D/M/YY</dateTemplate> <!-- This is formatted for polish time, for you burger loving friends it will be M/D/YYA or M/D/YA i dont remember-->
+            <timeZone>Central Europe Standard/Daylight Time</timeZone> <!-- Check https://usecallmanager.nz/sepmac-cnf-xml.html#timeZone for your timezone -->
+            <ntps>
+                <ntp>
+                    <name>0.pl.pool.ntp.org</name> <!-- choose an ntp server closest to you, this one is in poland -->
+                    <ntpMode>Unicast</ntpMode>
+                </ntp>
+            </ntps>
+        </dateTimeSetting>
+
+        <callManagerGroup>
+            <members>
+                <member priority="0">
+                    <callManager>
+                        <ports>
+                            <ethernetPhonePort>2000</ethernetPhonePort>
+                            <sipPort>5060</sipPort>
+                        </ports>
+                        <processNodeName>192.168.1.16</processNodeName> <!-- FreePBX address -->
+                    </callManager>
+                </member>
+            </members>
+        </callManagerGroup>
+    </devicePool>
+
+    <sipProfile>
+        <sipProxies>
+            <registerWithProxy>true</registerWithProxy>
+        </sipProxies>
+        <sipCallFeatures>
+            <cnfJoinEnabled>true</cnfJoinEnabled>
+            <rfc2543Hold>false</rfc2543Hold>
+            <callHoldRingback>2</callHoldRingback>
+            <localCfwdEnable>true</localCfwdEnable>
+            <semiAttendedTransfer>true</semiAttendedTransfer>
+            <anonymousCallBlock>2</anonymousCallBlock>
+            <callerIdBlocking>2</callerIdBlocking>
+            <dndControl>0</dndControl>
+            <remoteCcEnable>true</remoteCcEnable>
+            <callForwardURI>x-serviceuri-cfwdall</callForwardURI>  
+            <callPickupURI>x-cisco-serviceuri-pickup</callPickupURI>  
+            <callPickupListURI>x-cisco-serviceuri-opickup</callPickupListURI>  
+           <callPickupGroupURI>x-cisco-serviceuri-gpickup</callPickupGroupURI>  
+           <meetMeServiceURI>x-cisco-serviceuri-meetme</meetMeServiceURI>  
+           <abbreviatedDialURI>x-cisco-serviceuri-abbrdial</abbreviatedDialURI>  
+        </sipCallFeatures>
+
+        <sipStack>
+            <sipInviteRetx>6</sipInviteRetx>
+            <sipRetx>10</sipRetx>
+            <timerInviteExpires>180</timerInviteExpires>
+            <timerRegisterExpires>3600</timerRegisterExpires>
+            <timerRegisterDelta>5</timerRegisterDelta>
+            <timerKeepAliveExpires>120</timerKeepAliveExpires>
+            <timerSubscribeExpires>120</timerSubscribeExpires>
+            <timerSubscribeDelta>5</timerSubscribeDelta>
+            <timerT1>500</timerT1>
+            <timerT2>4000</timerT2>
+            <maxRedirects>70</maxRedirects>
+            <remotePartyID>true</remotePartyID>
+            <userInfo>None</userInfo>
+        </sipStack>
+
+        <autoAnswerTimer>1</autoAnswerTimer>
+        <autoAnswerAltBehavior>false</autoAnswerAltBehavior>
+        <autoAnswerOverride>true</autoAnswerOverride>
+        <transferOnhookEnabled>false</transferOnhookEnabled>
+        <enableVad>false</enableVad>
+        <preferredCodec>g722</preferredCodec>
+        <dtmfAvtPayload>101</dtmfAvtPayload>
+        <dtmfDbLevel>3</dtmfDbLevel>
+        <dtmfOutofBand>avt</dtmfOutofBand>
+        <alwaysUsePrimeLine>false</alwaysUsePrimeLine>
+        <alwaysUsePrimeLineVoiceMail>false</alwaysUsePrimeLineVoiceMail>
+        <kpml>3</kpml>
+        <natEnabled>false</natEnabled>
+        <phoneLabel>JB</phoneLabel> <!-- If this is too long then phone will not accept the config so keep it short, i put my initials here but you could put extension number or something -->
+        <stutterMsgWaiting>0</stutterMsgWaiting>
+        <callStats>false</callStats>
+        <silentPeriodBetweenCallWaitingBursts>10</silentPeriodBetweenCallWaitingBursts>
+        <disableLocalSpeedDialConfig>false</disableLocalSpeedDialConfig>
+        <startMediaPort>10000</startMediaPort>
+        <stopMediaPort>20000</stopMediaPort>
+
+        <sipLines>
+            <line button="1">
+                <featureID>9</featureID>
+                <featureLabel>3000</featureLabel> <!-- Label next to the line button -->
+                <proxy>USECALLMANAGER</proxy>
+                <port>5060</port>
+                <name>3000</name> <!-- Extension number -->
+                <displayName>3000</displayName>  <!-- Extension number -->
+                <autoAnswer>
+                    <autoAnswerEnabled>2</autoAnswerEnabled>
+                </autoAnswer>
+                <callWaiting>3</callWaiting>
+                <authName>3000</authName>  <!-- Extension number -->
+                <authPassword>12345678</authPassword>  <!-- Extension Password -->
+                <sharedLine>false</sharedLine>
+                <messageWaitingLampPolicy>3</messageWaitingLampPolicy>
+                <messagesNumber>*97</messagesNumber>  <!-- Voicemail number -->
+                <ringSettingIdle>4</ringSettingIdle>
+                <ringSettingActive>5</ringSettingActive>
+                <contact>1000</contact>  <!-- Extension number -->
+                <forwardCallInfoDisplay>
+                    <callerName>true</callerName>
+                    <callerNumber>true</callerNumber>
+                    <redirectedNumber>false</redirectedNumber>
+                    <dialedNumber>true</dialedNumber>
+                </forwardCallInfoDisplay>
+            </line>
+
+        </sipLines>
+
+        <voipControlPort>5160</voipControlPort>
+        <dscpForAudio>184</dscpForAudio>
+        <ringSettingBusyStationPolicy>0</ringSettingBusyStationPolicy>
+        <dialTemplate>dialplan.xml</dialTemplate> <!-- dialplan.xml should be in the same directory as this file -->
+    </sipProfile>
+
+    <commonProfile>
+        <backgroundImageAccess>true</backgroundImageAccess>
+        <callLogBlfEnabled>1</callLogBlfEnabled>
+    </commonProfile>
+
+    <loadInformation></loadInformation>
+    <vendorConfig>
+        <disableSpeaker>false</disableSpeaker>
+        <disableSpeakerAndHeadset>false</disableSpeakerAndHeadset>
+        <pcPort>0</pcPort>
+        <settingsAccess>1</settingsAccess>
+        <garp>0</garp>
+        <voiceVlanAccess>0</voiceVlanAccess>
+        <videoCapability>0</videoCapability>
+        <autoSelectLineEnable>0</autoSelectLineEnable>
+        <webAccess>1</webAccess>
+        <spanToPCPort>1</spanToPCPort>
+        <loggingDisplay>1</loggingDisplay>
+        <loadServer></loadServer>
+        <sshAccess>0</sshAccess>
+        <sshPort>22</sshPort>
+        <preferredCodec>g722</preferredCodec>
+        <g722CodecSupport>2</g722CodecSupport>
+    </vendorConfig>
+
+    <versionStamp>002</versionStamp>
+
+    <deviceSecurityMode>1</deviceSecurityMode>
+    <authenticationURL></authenticationURL>  
+    <servicesURL></servicesURL> 
+    <directoryURL></directoryURL>
+    <idleURL></idleURL>  
+    <informationURL></informationURL> 
+    <messagesURL></messagesURL>  
+    <proxyServerURL></proxyServerURL>  
+    <dialToneSetting>2</dialToneSetting>
+    <dscpForSCCPPhoneConfig>96</dscpForSCCPPhoneConfig>  
+    <dscpForSCCPPhoneServices>0</dscpForSCCPPhoneServices>  
+    <dscpForCm2Dvce>96</dscpForCm2Dvce>
+    <capfAuthMode>0</capfAuthMode>  
+    <capfList>  
+      <capf>  
+        <phonePort>3804</phonePort>  
+      </capf>  
+    </capfList> 
+    <transportLayerProtocol>4</transportLayerProtocol>
+    <certHash></certHash>  
+    <encrConfig>false</encrConfig>  
+</device>
