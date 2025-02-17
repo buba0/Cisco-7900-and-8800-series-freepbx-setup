@@ -119,6 +119,33 @@ You can customize the background of your Cisco 7900 series phones by adding a `D
 
 ---
 
+### 8. Phonebook
+I have been doing some tinkering and made a kind of phonebook by accident. If you want a phone book of sorts then I've attached a folder called [phonebook](phonebook/). In there there are PHP files, index.html we're interested about. Place the files in `/var/www/html/webapp` directory. It reads off of a database and returns the values with cisco phone format. you need to make a database called "phonebook" and a table "employees":
+   ```sql
+   CREATE DATABASE phonebook;
+   USE phonebook;
+   CREATE TABLE employees (
+   id INT AUTO_INCREMENT PRIMARY KEY,
+   name VARCHAR(100) NOT NULL,
+   phone VARCHAR(20) NOT NULL
+   );
+   ```
+   Next create a user that can access that database:
+   ```sql
+   CREATE USER 'user'@'%' IDENTIFIED BY 'password';
+   GRANT ALL PRIVILEGES ON phonebook.* TO 'user'@'%';
+   ```
+   Next you want to go to the [phone config](files/SEP(mac_address)_2014.cnf.xml) and find:
+   ```xml
+   <servicesURL></servicesURL>
+   ```
+   and add a URL like this:
+   ```xml
+   <servicesURL>http://freepbx_ip_address/webapp/index.php</servicesURL>
+   ```
+   Go to `http://freepbx_ip_address/webapp/contacts.php` to manage your contacts.
+   Also remember to change database credentials in the PHP files.
+
 ## Contact
 If you have any questions, feel free to reach out at [kubab945@gmail.com](mailto:kubab945@gmail.com).
 
