@@ -151,5 +151,7 @@ I have been doing some tinkering and made a kind of phonebook by accident. If yo
 ## Contact
 If you have any questions, feel free to reach out at [kubab945@gmail.com](mailto:kubab945@gmail.com).
 
+Or open a [GitHub issue](https://github.com/buba0/Cisco-7900-series-freepbx-setup/issues).
+
 &copy; 2025 [buba.pw](https://buba.pw)
 
