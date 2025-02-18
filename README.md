@@ -148,6 +148,10 @@ I have been doing some tinkering and made a kind of phonebook by accident. If yo
    Go to `http://freepbx_ip_address/webapp/contacts.php` to manage your contacts.
    Also remember to change database credentials in the PHP files.
 
+   To manage contacts you go to `http://freepbx_ip_address/webapp/contacts.php`
+   
+   ***AGAIN UPDATE DATABASE CREDENTIALS IN ALL PHP FILES FOR IT TO WORK***
+
 ## Contact
 If you have any questions, feel free to reach out at [kubab945@gmail.com](mailto:kubab945@gmail.com).
 
