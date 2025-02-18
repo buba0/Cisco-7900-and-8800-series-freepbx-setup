@@ -12,23 +12,36 @@ if ($conn->connect_error) {
     die("<?xml version='1.0' encoding='UTF-8'?><CiscoIPPhoneError><ErrorText>Database connection failed</ErrorText></CiscoIPPhoneError>");
 }
 
-// Get search query from phone
-$search = isset($_GET['query']) ? $conn->real_escape_string($_GET['query']) : '';
+// Get the base URL dynamically
+$base_url = "http://" . $_SERVER['HTTP_HOST'] . dirname($_SERVER['PHP_SELF']);
 
-// SQL to fetch employees based on search query, sorted by phone number in ascending order
-$sql = "SELECT name, phone FROM employees WHERE name LIKE '%$search%' OR phone LIKE '%$search%' ORDER BY phone ASC LIMIT 10";
+// Handle pagination
+$page = 1;
+if (preg_match('/index\.php\/page\/(\d+)/', $_SERVER['REQUEST_URI'], $matches)) {
+    $page = intval($matches[1]);
+}
+$page = max(1, $page);
+$limit = 10;
+$offset = ($page - 1) * $limit;
+
+// Fetch contacts sorted by phone number
+$sql = "SELECT name, phone FROM employees ORDER BY phone ASC LIMIT $limit OFFSET $offset";
 $result = $conn->query($sql);
+
+// Check if more pages exist
+$total_query = "SELECT COUNT(*) as total FROM employees";
+$total_result = $conn->query($total_query);
+$total_row = $total_result->fetch_assoc();
+$total_records = $total_row['total'];
+$has_next = ($page * $limit) < $total_records;
 
 // Start XML output
 echo "<?xml version='1.0' encoding='UTF-8'?>";
 echo "<CiscoIPPhoneDirectory>";
+echo "<Title>Contacts (Page $page)</Title>";
+echo "<Prompt>Select a contact to dial</Prompt>";
 
 if ($result->num_rows > 0) {
-    // Add a prompt for the phone to display
-    echo "<Title>Employee Directory</Title>";
-    echo "<Prompt>Search for an employee</Prompt>";
-    
-    // Loop through results and generate XML for each entry
     while ($row = $result->fetch_assoc()) {
         echo "<DirectoryEntry>";
         echo "<Name>" . htmlspecialchars($row['name']) . "</Name>";
@@ -36,10 +49,38 @@ if ($result->num_rows > 0) {
         echo "</DirectoryEntry>";
     }
 } else {
-    // If no results are found, show this message
-    echo "<Title>No Results</Title>";
-    echo "<Prompt>No employees match your search</Prompt>";
+    echo "<Title>No Contacts</Title>";
+    echo "<Prompt>No contacts found</Prompt>";
 }
+
+// Soft keys
+echo "<SoftKeyItem>";
+echo "<Name>Exit</Name>";
+echo "<Position>1</Position>";
+echo "<URL>SoftKey:Exit</URL>";
+echo "</SoftKeyItem>";
+
+if ($page > 1) {
+    echo "<SoftKeyItem>";
+    echo "<Name>Previous</Name>";
+    echo "<Position>2</Position>";
+    echo "<URL>$base_url/index.php/page/" . ($page - 1) . "</URL>";
+    echo "</SoftKeyItem>";
+}
+
+if ($has_next) {
+    echo "<SoftKeyItem>";
+    echo "<Name>Next</Name>";
+    echo "<Position>3</Position>";
+    echo "<URL>$base_url/index.php/page/" . ($page + 1) . "</URL>";
+    echo "</SoftKeyItem>";
+}
+
+echo "<SoftKeyItem>";
+echo "<Name>Dial</Name>";
+echo "<Position>4</Position>";
+echo "<URL>SoftKey:Dial</URL>";
+echo "</SoftKeyItem>";
 
 echo "</CiscoIPPhoneDirectory>";
 
