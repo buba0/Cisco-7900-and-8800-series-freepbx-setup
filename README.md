@@ -121,7 +121,7 @@ Image dimensions for different phone models:
    ```
 
 2. Place your custom background images in `320x196x4/` or `320x196x4/`. These must be in 320x196 resolution with 4-bit color depth or monochrome, if made for 7942. Refer to the table above for your phone's display details.
-3. Add a `List.xml` file inside the desired directory eg: `320x196x4` or `320x216x16` directory to specify available backgrounds.
+3. Add a `List.xml` file inside the desired directory eg: `320x196x4` or `320x216x16`  to specify available backgrounds.
 4. Example `List.xml` format:
    ```xml
    <CiscoIPPhoneImageList>
