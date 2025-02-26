@@ -99,7 +99,7 @@ cmterm-7945_7965-sip.9-4-2-1SR3-1.zip
 You can customize the background of your Cisco 7900 series phones by adding a `Desktops` directory to the TFTP server directory where `SEP[MAC_ADDRESS].cnf.xml` and `dialplan.xml` are stored.
 
 Image dimensions for different phone models:
-| Phone Model       | Full Image | Thumbnail (25% of original image) | Color Depth | Directory Path           |
+| Phone Model       | Full Image | Thumbnail (25% of full image) | Color Depth | Directory Path           |
 |-------------------|-----------------|----------------|-------------|--------------------------|
 | **7906G / 7911G** | 95 x 34         | 23 x 8         | Grayscale   | /Desktops/95x34x1        |
 | **7941G / 7961G** | 320 x 196       | 80 x 49        | Grayscale   | /Desktops/320x196x4      |
@@ -108,6 +108,7 @@ Image dimensions for different phone models:
 | **7970G / 7971G** | 320 x 212       | 80 x 53        | 12-bit Color| /Desktops/320x212x12     |
 | **7975G**         | 320 x 216       | 80 x 54        | 16-bit Color| /Desktops/320x216x16     |
 
+Images should be in PNG format.
 
 1. Create the following directory structure:
    
