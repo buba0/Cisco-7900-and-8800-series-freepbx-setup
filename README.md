@@ -98,12 +98,30 @@ cmterm-7945_7965-sip.9-4-2-1SR3-1.zip
 ### 7. Custom Backgrounds
 You can customize the background of your Cisco 7900 series phones by adding a `Desktops` directory to the TFTP server directory where `SEP[MAC_ADDRESS].cnf.xml` and `dialplan.xml` are stored.
 
+Image dimensions for different phone models:
+| Phone Model       | Full Image | Thumbnail (25% of original image) | Color Depth | Directory Path           |
+|-------------------|-----------------|----------------|-------------|--------------------------|
+| **7906G / 7911G** | 95 x 34         | 23 x 8         | Grayscale   | /Desktops/95x34x1        |
+| **7941G / 7961G** | 320 x 196       | 80 x 49        | Grayscale   | /Desktops/320x196x4      |
+| **7942G / 7962G** | 320 x 196       | 80 x 49        | Grayscale   | /Desktops/320x196x4      |
+| **7945G / 7965G** | 320 x 212       | 80 x 53        | 16-bit Color| /Desktops/320x212x16     |
+| **7970G / 7971G** | 320 x 212       | 80 x 53        | 12-bit Color| /Desktops/320x212x12     |
+| **7975G**         | 320 x 216       | 80 x 54        | 16-bit Color| /Desktops/320x216x16     |
+
+
 1. Create the following directory structure:
+   
+   For 7942 for example:
    ```
    /tftpboot/Desktops/320x196x4/
    ```
-2. Place your custom background images in `320x196x4/`. These must be in 320x196 resolution with 4-bit color depth or monochrome.
-3. Add a `List.xml` file inside the `320x196x4/` directory to specify available backgrounds.
+   For 7975:
+   ```
+   /tftpboot/Desktops/320x216x16/
+   ```
+
+2. Place your custom background images in `320x196x4/` or `320x196x4/`. These must be in 320x196 resolution with 4-bit color depth or monochrome, if made for 7942. Refer to the table above for your phone's display details.
+3. Add a `List.xml` file inside the desired directory eg: `320x196x4` or `320x216x16` directory to specify available backgrounds.
 4. Example `List.xml` format:
    ```xml
    <CiscoIPPhoneImageList>
@@ -114,8 +132,6 @@ You can customize the background of your Cisco 7900 series phones by adding a `D
     </CiscoIPPhoneImageList>
    ```
 5. Restart the phone and navigate to the settings to select the new background.
-
-6. Background images themselves are as the name suggests 320 by 196 pixels, and the thumbnails need to be 80 by 49 so 25% of the backround image.
 
 ---
 
