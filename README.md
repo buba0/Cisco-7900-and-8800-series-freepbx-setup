@@ -163,7 +163,7 @@ I have been doing some tinkering and made a kind of phonebook by accident. If yo
    Now when you press the globe icon on the phone the service will show a list of users that you put in.
 
    Go to `http://freepbx_ip_address/webapp/contacts.php` to manage your contacts.
-   ***UPDATE DATABASE CREDENTIALS IN ALL PHP FILES FOR IT TO WORK***
+   ***UPDATE DATABASE CREDENTIALS IN [THE CONFIG FILE](phonebook/config.php) FOR THE SERVICE TO WORK***
 
 ## Contact
 If you have any questions, feel free to reach out at [kubab945@gmail.com](mailto:kubab945@gmail.com).

@@ -2,10 +2,7 @@
 header("Content-Type: text/xml");
 
 // Database connection
-$host = "localhost";
-$user = "user";
-$pass = "password";
-$dbname = "phonebook";
+require_once "config.php";
 $conn = new mysqli($host, $user, $pass, $dbname);
 
 if ($conn->connect_error) {
