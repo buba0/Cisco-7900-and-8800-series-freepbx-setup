@@ -162,6 +162,8 @@ I have been doing some tinkering and made a kind of phonebook by accident. If yo
    ```
    Now when you press the globe icon on the phone the service will show a list of users that you put in.
 
+   In the [index.php](phonebook/index.php) there is a variable called `$limit = X` where X is the number of contacts per page. If there is more entries in the phonebook than the value of this variable, the directory/phonebook will have a softkey "Next" and "Previous"
+
    Go to `http://freepbx_ip_address/webapp/contacts.php` to manage your contacts.
    ***UPDATE DATABASE CREDENTIALS IN [THE CONFIG FILE](phonebook/config.php) FOR THE SERVICE TO WORK***
 

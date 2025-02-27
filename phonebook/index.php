@@ -18,7 +18,7 @@ if (preg_match('/index\.php\/page\/(\d+)/', $_SERVER['REQUEST_URI'], $matches)) 
     $page = intval($matches[1]);
 }
 $page = max(1, $page);
-$limit = 10;
+$limit = 10; //Contacts per page, 10 by default, can be more. Customizable
 $offset = ($page - 1) * $limit;
 
 // Fetch contacts sorted by phone number
