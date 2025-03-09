@@ -1,0 +1,4 @@
+<CiscoIPPhoneImageList>
+    <ImageItem Image="TFTP:Desktops/95x34x1/your-thumbnail-image-tn.png"
+       URL="TFTP:Desktops/95x34x1/your-image-file-name.png"/>
+</CiscoIPPhoneImageList>
