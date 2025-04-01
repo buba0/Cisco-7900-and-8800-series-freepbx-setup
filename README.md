@@ -2,9 +2,12 @@
 
 ![Fleet of the phones](images/fleet.png)
 
-## Note
+## NOTE
 All of the content of this repository is taken from my website as it is easier to add stuff here rather than on the website.
 https://buba.pw/tutorial
+
+## NOTE 2
+I TESTED THIS ONLY ON 7975G and 7942G SO I DON'T KNOW IF IT WORKS ON OTHER MODELS, FEEL FREE TO TEST AND SHARE YOUR EXPERIENCES!!!!
 
 ## Introduction
 Welcome! This tutorial will guide you through the process of setting up [Cisco 7900](https://www.cisco.com/c/en/us/products/collaboration-endpoints/unified-ip-phone-7900-series/index.html) phones to work with [FreePBX](https://www.freepbx.org/).
@@ -173,4 +176,6 @@ If you have any questions, feel free to reach out at [kubab945@gmail.com](mailto
 Or open a [GitHub issue](https://github.com/buba0/Cisco-7900-series-freepbx-setup/issues).
 
 &copy; 2025 [buba.pw](https://buba.pw)
+## Star History
 
+[![Star History Chart](https://api.star-history.com/svg?repos=buba0/Cisco-7900-series-freepbx-setup&type=Date)](https://www.star-history.com/#buba0/Cisco-7900-series-freepbx-setup&Date)
