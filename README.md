@@ -96,9 +96,19 @@ cmterm-7945_7965-sip.9-4-2-1SR3-1.zip
 
 3. Click **Submit** and **Apply Config**, then restart FreePBX and the phone.
 
+### 7. Enable G722 Codec in FreePBX for HD voice
+By default my config allows you to use HD voice or G722 codec, to make use of this
+1. Go to the IP of your FreePBX and log in
+2. Once on the dashboard hover over **Settings**
+3. Click on **Asterisk SIP Settings**
+4. Scroll down to **Codecs**
+5. Enable **"g722"** and move it to the top of the list
+6. Press Submit and Apply Config
+7. For good measure I'd restart both the FreePBX server and the phones
+
 ---
 
-### 7. Custom Backgrounds
+### 8. Custom Backgrounds
 You can customize the background of your Cisco 7900 series phones by adding a `Desktops` directory to the TFTP server directory where `SEP[MAC_ADDRESS].cnf.xml` and `dialplan.xml` are stored.
 
 Image dimensions for different phone models:
@@ -139,7 +149,7 @@ Images should be in PNG format.
 
 ---
 
-### 8. Phonebook
+### 9. Phonebook
 I have been doing some tinkering and made a kind of phonebook by accident. If you want a phone book of sorts then I've attached a folder called [phonebook](phonebook/). In there there are PHP files, index.html we're interested about. Place the files in `/var/www/html/webapp` directory. It reads off of a database and returns the values with cisco phone format. you need to make a database called "phonebook" and a table "employees":
    ```sql
    CREATE DATABASE phonebook;
