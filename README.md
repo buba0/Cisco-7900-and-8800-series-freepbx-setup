@@ -226,6 +226,7 @@ I have been doing some tinkering and made a kind of phonebook by accident. If yo
    ***UPDATE DATABASE CREDENTIALS IN [THE CONFIG FILE](phonebook/config.php) FOR THE SERVICE TO WORK***
 
 ---
+
 ## Contact
 If you have any questions, feel free to reach out at [kubab945@gmail.com](mailto:kubab945@gmail.com).
 
