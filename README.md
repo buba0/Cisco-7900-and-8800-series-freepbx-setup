@@ -149,7 +149,52 @@ Images should be in PNG format.
 
 ---
 
-### 9. Phonebook
+### 9. Custom ringtones
+I provided a list of cutom ringtones with `.raw` and a [ringlist.xml](files/ringlist.xml) file for 7900 series phones. You need to puth both in the tftp root directory. As for 8800 series, you need a [Ringlist-wb.xml](files/Ringlist-wb.xml) file, it support `.raw` ringotnes that are for the 7900 series and `.rwb` ringtones which are wideband ringtones for the 8800 series specifficaly and will not work for 7900 series.
+
+To make custom ringtones:
+1. For 7900 series and 8800 series (LQ)
+   1. get [Audacity](https://www.audacityteam.org/)
+   2. import your ringtone and keep it to about 30s
+   3. Click File → Export Audio... and export with these settings. 
+
+   ![Export](images/export-7900.png)
+
+   4. Put this file in the tftp root
+   5. Add entry to the [ringlist.xml](files/ringlist.xml) and/or [Ringlist-wb.xml](files/Ringlist-wb.xml)
+   ```xml
+      <Ring>
+		   <DisplayName>Ringtone</DisplayName>
+		   <FileName>ringtone.raw</FileName>
+	   </Ring>
+   ```
+2. For 8800 series ONLY
+   1. get [Audacity](https://www.audacityteam.org/)
+   2. import your ringtone and keep it to about 30s
+   3. Click File → Export Audio... and export with these settings.
+
+   
+   ![Export](images/export-8800.png)
+   
+   Note: change `.raw` to `.rwb` file extension
+
+   4. Put this file in the tftp root
+   5. Add entry to the [Ringlist-wb.xml](files/Ringlist-wb.xml)
+   ```xml
+      <Ring>
+		   <DisplayName>Ringtone</DisplayName>
+		   <FileName>ringtone.rwb</FileName>
+	   </Ring>
+   ```
+
+---
+
+### 10. Cisco 8800 series phones
+Configuration is the same as 7900 series, config is a bit different but I provided it aswell. You need to put [ITLFile.tlv](files/ITLFile.tlv) (courtesy of [Ryan Kim](https://github.com/csptechnologies)) and [softkeys.xml](files/softkeys.xml) in the tftp root directory. for this to work. If you experience any issues with 8800 series phones open a [GitHub issue](https://github.com/buba0/Cisco-7900-series-freepbx-setup/issues).
+
+---
+
+### 11. Phonebook
 I have been doing some tinkering and made a kind of phonebook by accident. If you want a phone book of sorts then I've attached a folder called [phonebook](phonebook/). In there there are PHP files, index.html we're interested about. Place the files in `/var/www/html/webapp` directory. It reads off of a database and returns the values with cisco phone format. you need to make a database called "phonebook" and a table "employees":
    ```sql
    CREATE DATABASE phonebook;
@@ -180,6 +225,7 @@ I have been doing some tinkering and made a kind of phonebook by accident. If yo
    Go to `http://freepbx_ip_address/webapp/contacts.php` to manage your contacts.
    ***UPDATE DATABASE CREDENTIALS IN [THE CONFIG FILE](phonebook/config.php) FOR THE SERVICE TO WORK***
 
+---
 ## Contact
 If you have any questions, feel free to reach out at [kubab945@gmail.com](mailto:kubab945@gmail.com).
 
