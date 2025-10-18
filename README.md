@@ -190,7 +190,7 @@ To make custom ringtones:
 ---
 
 ### 10. Cisco 8800 series phones
-Configuration is the same as 7900 series, config is a bit different but I provided it aswell. You need to put [ITLFile.tlv](files/ITLFile.tlv) (courtesy of [Ryan Kim](https://github.com/csptechnologies)) and [softkeys.xml](files/softkeys.xml) in the tftp root directory. for this to work. If you experience any issues with 8800 series phones open a [GitHub issue](https://github.com/buba0/Cisco-7900-series-freepbx-setup/issues).
+Configuration is mostly the same as 7900 series, but a bit different but I provided it aswell. You need to put [ITLFile.tlv](files/ITLFile.tlv) (courtesy of [Ryan Kim](https://github.com/csptechnologies)) and [softkeys.xml](files/softkeys.xml) in the tftp root directory. for this to work. If you experience any issues with 8800 series phones open a [GitHub issue](https://github.com/buba0/Cisco-7900-series-freepbx-setup/issues).
 
 ---
 
