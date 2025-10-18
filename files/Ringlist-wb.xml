@@ -1,5 +1,49 @@
 <CiscoIPPhoneRingList>
 	<Ring>
+		<DisplayName>Ascent</DisplayName>
+		<FileName>Ascent.rwb</FileName>
+	</Ring>
+	<Ring>
+		<DisplayName>Calculation</DisplayName>
+		<FileName>Calculation.rwb</FileName>
+	</Ring>
+	<Ring>
+		<DisplayName>Delight</DisplayName>
+		<FileName>Delight.rwb</FileName>
+	</Ring>
+	<Ring>
+		<DisplayName>Evolve</DisplayName>
+		<FileName>Evolve.rwb</FileName>
+	</Ring>
+	<Ring>
+		<DisplayName>Mellow</DisplayName>
+		<FileName>Mellow.rwb</FileName>
+	</Ring>
+        <Ring>
+		<DisplayName>Mischief</DisplayName>
+		<FileName>Mischief.rwb</FileName>
+	</Ring>
+    <Ring>
+        <DisplayName>Playful</DisplayName>
+        <FileName>Playful.rwb</FileName>
+    </Ring>
+    <Ring>
+        <DisplayName>Reflections</DisplayName>
+        <FileName>Reflections.rwb</FileName>
+    </Ring>
+    <Ring>
+        <DisplayName>Ringer</DisplayName>
+        <FileName>Ringer.rwb</FileName>
+    </Ring>
+    <Ring>
+        <DisplayName>Ripples</DisplayName>
+        <FileName>Ripples.rwb</FileName>
+    </Ring>
+    <Ring>
+        <DisplayName>Vibes</DisplayName>
+        <FileName>Vibes.rwb</FileName>
+    </Ring>
+	<Ring>
 		<DisplayName>Analog Synth 1</DisplayName>
 		<FileName>Analog1.raw</FileName>
 	</Ring>
