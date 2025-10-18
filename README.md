@@ -235,4 +235,12 @@ Or open a [GitHub issue](https://github.com/buba0/Cisco-7900-series-freepbx-setu
 &copy; 2025 [buba.pw](https://buba.pw)
 ## Star History
 
-[![Star History Chart](https://api.star-history.com/svg?repos=buba0/Cisco-7900-series-freepbx-setup&type=Date)](https://www.star-history.com/#buba0/Cisco-7900-series-freepbx-setup&Date)
+## Star History
+
+<a href="https://www.star-history.com/#buba0/Cisco-7900-series-freepbx-setup&type=date&legend=bottom-right">
+ <picture>
+   <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/svg?repos=buba0/Cisco-7900-series-freepbx-setup&type=date&theme=dark&legend=bottom-right" />
+   <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/svg?repos=buba0/Cisco-7900-series-freepbx-setup&type=date&legend=bottom-right" />
+   <img alt="Star History Chart" src="https://api.star-history.com/svg?repos=buba0/Cisco-7900-series-freepbx-setup&type=date&legend=bottom-right" />
+ </picture>
+</a>
