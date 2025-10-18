@@ -1,5 +1,9 @@
 <CiscoIPPhoneRingList>
 	<Ring>
+		<DisplayName>Chirp3</DisplayName>
+		<FileName>Chirp1sped.raw</FileName>
+	</Ring>
+	<Ring>
 		<DisplayName>Ascent</DisplayName>
 		<FileName>Ascent.rwb</FileName>
 	</Ring>
@@ -44,51 +48,71 @@
         <FileName>Vibes.rwb</FileName>
     </Ring>
 	<Ring>
-		<DisplayName>Analog Synth 1</DisplayName>
+		<DisplayName>Incoming_EQ</DisplayName>
+		<FileName>incomingeq.raw</FileName>
+	</Ring>
+	<Ring>
+		<DisplayName>Inroom Leaves</DisplayName>
+		<FileName>InRoom_Leaves.rwb</FileName>
+	</Ring>
+    <Ring>
+        <DisplayName>ATT Firefly</DisplayName>
+        <FileName>ATT_Firefly.raw</FileName>
+    </Ring>
+	<Ring>
+		<DisplayName>Skype</DisplayName>
+		<FileName>skype.raw</FileName>
+	</Ring>
+	<Ring>
+		<DisplayName>Are You There Female</DisplayName>
+		<FileName>AreYouThereF.raw</FileName>
+	</Ring>
+	<Ring>
+		<DisplayName>Magical Ringing Device</DisplayName>
+		<FileName>magicalringingdevice.raw</FileName>
+	</Ring>
+    <Ring>
+        <DisplayName>Microsoft Team</DisplayName>
+        <FileName>teams.raw</FileName>
+    </Ring>
+	<Ring>
+		<DisplayName>24 CTU</DisplayName>
+		<FileName>ctu_24.rwb</FileName>
+	</Ring>
+	<Ring>
+		<DisplayName>Bell System</DisplayName>
+		<FileName>old_telephone.rwb</FileName>
+	</Ring>
+	<Ring>
+		<DisplayName>Angry Birds</DisplayName>
+		<FileName>angrybirds.rwb</FileName>
+	</Ring>
+	<Ring>
+		<DisplayName>Analog 1</DisplayName>
 		<FileName>Analog1.raw</FileName>
 	</Ring>
 	<Ring>
-		<DisplayName>Analog Synth 2</DisplayName>
+		<DisplayName>Analog 2</DisplayName>
 		<FileName>Analog2.raw</FileName>
-	</Ring>
-	<Ring>
-		<DisplayName>Are You There 1</DisplayName>
-		<FileName>AreYouThere.raw</FileName>
-	</Ring>
-	<Ring>
-		<DisplayName>Are You There 2</DisplayName>
-		<FileName>AreYouThereF.raw</FileName>
 	</Ring>
 	<Ring>
 		<DisplayName>Bass</DisplayName>
 		<FileName>Bass.raw</FileName>
 	</Ring>
 	<Ring>
+		<DisplayName>Call Back</DisplayName>
+		<FileName>CallBack.raw</FileName>
+	</Ring>
+	<Ring>
 		<DisplayName>Chime</DisplayName>
 		<FileName>Chime.raw</FileName>
 	</Ring>
 	<Ring>
-		<DisplayName>Cisco Standard</DisplayName>
-		<FileName>CiscoStandard.raw</FileName>
-	</Ring>
-	<Ring>
-		<DisplayName>Cisco Symphonic</DisplayName>
-		<FileName>CiscoSymphonic.raw</FileName>
-	</Ring>
-	<Ring>
-		<DisplayName>Cisco Synth</DisplayName>
-		<FileName>CiscoSynth.raw</FileName>
-	</Ring>
-	<Ring>
-		<DisplayName>Cisco Techno</DisplayName>
-		<FileName>CiscoTechno.raw</FileName>
-	</Ring>
-	<Ring>
-		<DisplayName>Classic Ring 1</DisplayName>
+		<DisplayName>Classic 1</DisplayName>
 		<FileName>Classic1.raw</FileName>
 	</Ring>
 	<Ring>
-		<DisplayName>Classic Ring 2</DisplayName>
+		<DisplayName>Classic 2</DisplayName>
 		<FileName>Classic2.raw</FileName>
 	</Ring>
 	<Ring>
@@ -140,23 +164,19 @@
 		<FileName>Pulse1.raw</FileName>
 	</Ring>
 	<Ring>
-		<DisplayName>Saxophone 1</DisplayName>
+		<DisplayName>Sax 1</DisplayName>
 		<FileName>Sax1.raw</FileName>
 	</Ring>
 	<Ring>
-		<DisplayName>Saxophone 2</DisplayName>
+		<DisplayName>Sax 2</DisplayName>
 		<FileName>Sax2.raw</FileName>
 	</Ring>
 	<Ring>
-		<DisplayName>Vibe</DisplayName>
-		<FileName>Vibe.raw</FileName>
+		<DisplayName>Perfidia</DisplayName>
+		<FileName>perfidia-wb.rwb</FileName>
 	</Ring>
 	<Ring>
-		<DisplayName>La Passion</DisplayName>
-		<FileName>passion.raw</FileName>
-	</Ring>
-    <Ring>
-		<DisplayName>La Passion wideband</DisplayName>
-		<FileName>perfidia-wb.rwb</FileName>
+		<DisplayName>Google Duo</DisplayName>
+		<FileName>google.rwb</FileName>
 	</Ring>
 </CiscoIPPhoneRingList>
