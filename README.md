@@ -154,14 +154,14 @@ I provided a list of cutom ringtones with `.raw` and a [ringlist.xml](files/ring
 
 To make custom ringtones:
 1. For 7900 series and 8800 series (LQ)
-   1. get [Audacity](https://www.audacityteam.org/)
-   2. import your ringtone and keep it to about 30s
-   3. Click File → Export Audio... and export with these settings. 
+   - get [Audacity](https://www.audacityteam.org/)
+   - import your ringtone and keep it to about 30s
+   - Click File → Export Audio... and export with these settings. 
 
    ![Export](images/export-7900.png)
 
-   4. Put this file in the tftp root
-   5. Add entry to the [ringlist.xml](files/ringlist.xml) and/or [Ringlist-wb.xml](files/Ringlist-wb.xml)
+   - Put this file in the tftp root
+   - Add entry to the [ringlist.xml](files/ringlist.xml) and/or [Ringlist-wb.xml](files/Ringlist-wb.xml)
    ```xml
       <Ring>
 		   <DisplayName>Ringtone</DisplayName>
@@ -169,17 +169,17 @@ To make custom ringtones:
 	   </Ring>
    ```
 2. For 8800 series ONLY
-   1. get [Audacity](https://www.audacityteam.org/)
-   2. import your ringtone and keep it to about 30s
-   3. Click File → Export Audio... and export with these settings.
+   - get [Audacity](https://www.audacityteam.org/)
+   - import your ringtone and keep it to about 30s
+   - Click File → Export Audio... and export with these settings.
 
    
    ![Export](images/export-8800.png)
    
    Note: change `.raw` to `.rwb` file extension
 
-   4. Put this file in the tftp root
-   5. Add entry to the [Ringlist-wb.xml](files/Ringlist-wb.xml)
+   - Put this file in the tftp root
+   - Add entry to the [Ringlist-wb.xml](files/Ringlist-wb.xml)
    ```xml
       <Ring>
 		   <DisplayName>Ringtone</DisplayName>
