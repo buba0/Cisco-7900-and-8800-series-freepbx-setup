@@ -1,26 +1,24 @@
-# How to Register Cisco 7900 Series Phones to FreePBX
+# How to Register Cisco 7900 and 8800 Series Phones to FreePBX
 
 ![Fleet of the phones](images/fleet.png)
+![Fleet of the phones 8800](images/fleet8800.png)
+
 
 ## NOTE
-All of the content of this repository is taken from my website as it is easier to add stuff here rather than on the website.
-https://buba.pw/tutorial
-
-## NOTE 2
-I TESTED THIS ONLY ON 7975G and 7942G SO I DON'T KNOW IF IT WORKS ON OTHER MODELS, FEEL FREE TO TEST AND SHARE YOUR EXPERIENCES!!!!
+I tested this on 7942, 7970, 7975, 7821 and 8851.
 
 ## Introduction
 Welcome! This tutorial will guide you through the process of setting up [Cisco 7900](https://www.cisco.com/c/en/us/products/collaboration-endpoints/unified-ip-phone-7900-series/index.html) phones to work with [FreePBX](https://www.freepbx.org/).
 
-For [clabretro](https://www.youtube.com/@clabretro), I've found SIP firmware for 7965 phones. You can download it from the official Cisco link below:
 
-[**SIP Firmware**](https://software.cisco.com/download/home/281346596/type/282074288/release/9.4(2)SR3)
-
-If you don’t have a Cisco account or can’t download it, email me, and I'll send it to you. Make sure to download:
+Cisco removed the 7900 series firmware downloads so look on the internet for files called something like:
 
 ```
 cmterm-7945_7965-sip.9-4-2-1SR3-1.zip
 ```
+
+Here's a dowload link for some sites I found: [Site](https://www.firewall.cx/downloads/cisco-ip-phones-voip-devices-firmware-software.html?limit=20&limitstart=20)
+
 
 ---
 
