@@ -111,15 +111,17 @@ By default my config allows you to use HD voice or G722 codec, to make use of th
 ### 8. Custom Backgrounds
 You can customize the background of your Cisco 7900 series phones by adding a `Desktops` directory to the TFTP server directory where `SEP[MAC_ADDRESS].cnf.xml` and `dialplan.xml` are stored.
 
-Image dimensions for different phone models:
-| Phone Model       | Full Image | Thumbnail (25% of full image) | Color Depth | Directory Path           |
-|-------------------|-----------------|----------------|-------------|--------------------------|
-| **7906G / 7911G** | 95 x 34         | 23 x 8         | Grayscale   | /Desktops/95x34x1        |
-| **7941G / 7961G** | 320 x 196       | 80 x 49        | Grayscale   | /Desktops/320x196x4      |
-| **7942G / 7962G** | 320 x 196       | 80 x 49        | Grayscale   | /Desktops/320x196x4      |
-| **7945G / 7965G** | 320 x 212       | 80 x 53        | 16-bit Color| /Desktops/320x212x16     |
-| **7970G / 7971G** | 320 x 212       | 80 x 53        | 12-bit Color| /Desktops/320x212x12     |
-| **7975G**         | 320 x 216       | 80 x 54        | 16-bit Color| /Desktops/320x216x16     |
+
+|              Phone Model             | Full Image | Thumbnail (25% of full image) | Color Depth |   Directory Path     |
+|--------------------------------------|------------|-------------------------------|-------------|----------------------|
+| **7941 / 7961 / 7942 / 7962**        | 320x196    | 80x53                         | 4           | /Desktops/320x196x4  |
+| **7945 / 7965**                      | 320x212    | 80x53                         | 16          | /Desktops/320x212x16 |
+| **7970 / 7971**                      | 320x212    | 80x53                         | 12          | /Desktops/320x212x12 |
+| **7975**                             | 320x216    | 80x53                         | 16          | /Desktops/320x216x16 |
+| **8821**                             | 240x320    | 117x117                       | 24          | /Desktops/240x320x24 |
+| **8841 / 8845 / 8851 / 8861 / 8865** | 800x480    | 139x109                       | 24          | /Desktops/800x480x24 |
+| **8941 / 8945**                      | 640x480    | 123x111                       | 24          | /Desktops/800x480x24 |
+| **8961 / 9951 / 9971**               | 640x480    | 123x111                       | 24          | /Desktops/640x480x24 |
 
 Images should be in PNG format.
 
