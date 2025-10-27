@@ -232,7 +232,7 @@ If you have any questions, feel free to reach out at [kubab945@gmail.com](mailto
 
 Or open a [GitHub issue](https://github.com/buba0/Cisco-7900-series-freepbx-setup/issues).
 
-&copy; 2025 [buba.pw](https://buba.pw)
+&copy; 2025 [buba.net.pl](https://buba.net.pl)
 
 ## Star History
 
