@@ -94,7 +94,17 @@ Here's a dowload link for some sites I found: [Site](https://www.firewall.cx/dow
 
 3. Click **Submit** and **Apply Config**, then restart FreePBX and the phone.
 
-### 7. Enable G722 Codec in FreePBX for HD voice
+### 7. Enable SIP Guests (If the phone doesn't register)
+Some people and myself have run into an issue where the phones might not register. In such case do the following:
+
+1. Log in to FreePBX
+2. Click on Settings
+3. Click on Asterisk SIP Settings'
+4. Set "Allow SIP Guests" to YES
+   ![Allow SIP Guests](images/allow_sip.png)
+
+
+### 8. Enable G722 Codec in FreePBX for HD voice
 By default my config allows you to use HD voice or G722 codec, to make use of this
 1. Go to the IP of your FreePBX and log in
 2. Once on the dashboard hover over **Settings**
@@ -106,7 +116,7 @@ By default my config allows you to use HD voice or G722 codec, to make use of th
 
 ---
 
-### 8. Custom Backgrounds
+### 9. Custom Backgrounds
 You can customize the background of your Cisco 7900 series phones by adding a `Desktops` directory to the TFTP server directory where `SEP[MAC_ADDRESS].cnf.xml` and `dialplan.xml` are stored.
 
 
@@ -149,7 +159,7 @@ Images should be in PNG format.
 
 ---
 
-### 9. Custom ringtones
+### 10. Custom ringtones
 I provided a list of cutom ringtones with `.raw` and a [ringlist.xml](files/ringlist.xml) file for 7900 series phones. You need to puth both in the tftp root directory. As for 8800 series, you need a [Ringlist-wb.xml](files/Ringlist-wb.xml) file, it support `.raw` ringotnes that are for the 7900 series and `.rwb` ringtones which are wideband ringtones for the 8800 series specifficaly and will not work for 7900 series.
 
 To make custom ringtones:
@@ -189,12 +199,12 @@ To make custom ringtones:
 
 ---
 
-### 10. Cisco 8800 series phones
+### 11. Cisco 8800 series phones
 Configuration is mostly the same as 7900 series, but a bit different but I provided it aswell. You need to put [ITLFile.tlv](files/ITLFile.tlv) (courtesy of [Ryan Kim](https://github.com/csptechnologies)) and [softkeys.xml](files/softkeys.xml) in the tftp root directory. for this to work. If you experience any issues with 8800 series phones open a [GitHub issue](https://github.com/buba0/Cisco-7900-series-freepbx-setup/issues).
 
 ---
 
-### 11. Phonebook
+### 12. Phonebook
 I have been doing some tinkering and made a kind of phonebook by accident. If you want a phone book of sorts then I've attached a folder called [phonebook](phonebook/). In there there are PHP files, index.html we're interested about. Place the files in `/var/www/html/webapp` directory. It reads off of a database and returns the values with cisco phone format. you need to make a database called "phonebook" and a table "employees":
    ```sql
    CREATE DATABASE phonebook;
