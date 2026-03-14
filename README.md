@@ -83,7 +83,7 @@ Here's a dowload link for some sites I found: [Site](https://www.firewall.cx/dow
    - Press the **Checkmark** button → `Network Configuration` → `IPv4 Configuration` → `Alternate TFTP`
    - Press `**#` to unlock settings
    - Click `Yes` to enable Alternate TFTP
-   - Scroll to `TFTP Server 1` and set it to the TFTP server's IP
+   - Scroll to `TFTP Server 1` and set it to the TFTP/HTTP server's IP
 5. Restart the phone. It should provision automatically.
 
 ### 6. Enable TCP Transport in FreePBX (If the Phone Does Not Register)
