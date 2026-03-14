@@ -49,7 +49,7 @@ Here's a dowload link for some sites I found: [Site](https://www.firewall.cx/dow
 3. Wait for the phone to display an IP address and begin downloading files from the TFTP server. You can monitor this in Tftpd64.
 4. Once the phone finishes downloading, it will reboot automatically.
 
-### 4. Set Up a TFTP Server on FreePBX
+### 4. Set Up a TFTP Server on FreePBX (NOTE: on 7800/8800 series and on 7900 series with FW Version 9-4-X or higher, you may use an HTTP server running on port 6970 to host the files instead of using a TFTP server. You would put in the HTTP Server's address into the Phone's TFTP Settings)
 1. Install the TFTP server on Debian 12:
 
    ```sh
@@ -83,7 +83,7 @@ Here's a dowload link for some sites I found: [Site](https://www.firewall.cx/dow
    - Press the **Checkmark** button → `Network Configuration` → `IPv4 Configuration` → `Alternate TFTP`
    - Press `**#` to unlock settings
    - Click `Yes` to enable Alternate TFTP
-   - Scroll to `TFTP Server 1` and set it to the TFTP server's IP
+   - Scroll to `TFTP Server 1` and set it to the TFTP/HTTP server's IP
 5. Restart the phone. It should provision automatically.
 
 ### 6. Enable TCP Transport in FreePBX (If the Phone Does Not Register)
