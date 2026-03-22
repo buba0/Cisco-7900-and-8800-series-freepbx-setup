@@ -1,0 +1,292 @@
+<?xml version="1.0"?>
+<device xsi:type="axl:XIPPhone" ctiid="8" uuid="{cc033434-07cc-a784-c012-dba956d9c16b}">
+    <fullConfig>true</fullConfig>
+    <deviceProtocol>SIP</deviceProtocol>
+    <sshUserId></sshUserId>
+    <sshPassword></sshPassword>
+    <ipAddressMode>0</ipAddressMode>
+    <allowAutoConfig>true</allowAutoConfig>
+    <dadEnable>true</dadEnable>
+    <redirectEnable>false</redirectEnable>
+    <echoMultiEnable>false</echoMultiEnable>
+    <ipPreferenceModeControl>0</ipPreferenceModeControl>
+    <ipMediaAddressFamilyPreference>0</ipMediaAddressFamilyPreference>
+    <tzdata>
+        <tzolsonversion>2020a-2026</tzolsonversion>
+        <tzupdater>tzdatacsv.csv</tzupdater>
+    </tzdata>
+    <preemption>Disabled</preemption>
+    <executiveOverridePreemptable>false</executiveOverridePreemptable>
+    <devicePool uuid="{1b1b9eb6-7803-11d3-bdf0-00108302ead1}">
+        <revertPriority>0</revertPriority>
+        <name>Default</name>
+        <dateTimeSetting  uuid="{9ec4850a-7748-11d3-bdf0-00108302ead1}">
+            <name>CMLocal</name>
+            <dateTemplate>M/D/Y</dateTemplate>
+            <timeZone>Central Standard Time (Saskatchewan)</timeZone>
+            <olsonTimeZone>America/Regina</olsonTimeZone>
+        </dateTimeSetting>
+        <callManagerGroup>
+            <name>Default</name>
+            <tftpDefault>true</tftpDefault>
+            <members>
+                <member priority="0">
+                    <callManager>
+                        <name>[SIP SERVER NAME]</name><!-- FreePBX server name -->
+                        <description>[SIP SERVER DESCRIPTION]</description>
+                        <ports>
+                            <ethernetPhonePort>2000</ethernetPhonePort>
+                            <sipPort>5060</sipPort>
+                            <securedSipPort>5061</securedSipPort>
+                            <sipOAuthPort>5090</sipOAuthPort>
+                            <sipMRAOAuthPort>5091</sipMRAOAuthPort>
+                            <mgcpPorts>
+                                <listen>2427</listen>
+                                <keepAlive>2428</keepAlive>
+                            </mgcpPorts>
+                        </ports>
+                        <processNodeName>[SIP SERVER ADDRESS]</processNodeName><!-- FreePBX Server Address-->
+                    </callManager>
+                </member>
+            </members>
+        </callManagerGroup>
+        <srstInfo  uuid="{cd241e11-4a58-4d3d-9661-f06c912a18a3}">
+            <name>Disable</name>
+            <srstOption>Disable</srstOption>
+            <userModifiable>false</userModifiable>
+            <ipAddr1></ipAddr1>
+            <port1>2000</port1>
+            <ipAddr2></ipAddr2>
+            <port2>2000</port2>
+            <ipAddr3></ipAddr3>
+            <port3>2000</port3>
+            <sipIpAddr1></sipIpAddr1>
+            <sipPort1>5060</sipPort1>
+            <sipIpV6Addr1></sipIpV6Addr1>
+            <sipIpAddr2></sipIpAddr2>
+            <sipPort2>5060</sipPort2>
+            <sipIpAddr3></sipIpAddr3>
+            <sipPort3>5060</sipPort3>
+            <isSecure>false</isSecure>
+        </srstInfo>
+        <connectionMonitorDuration>120</connectionMonitorDuration>
+    </devicePool>
+    <sipProfile>
+        <sipProxies>
+            <backupProxy>USECALLMANAGER</backupProxy>
+            <backupProxyPort>5060</backupProxyPort>
+            <emergencyProxy>USECALLMANAGER</emergencyProxy>
+            <emergencyProxyPort>5060</emergencyProxyPort>
+            <outboundProxy>USECALLMANAGER</outboundProxy>
+            <outboundProxyPort>5060</outboundProxyPort>
+            <registerWithProxy>true</registerWithProxy>
+        </sipProxies>
+        <sipCallFeatures>
+            <cnfJoinEnabled>true</cnfJoinEnabled>
+            <callForwardURI>x-cisco-serviceuri-cfwdall</callForwardURI>
+            <callPickupURI>x-cisco-serviceuri-pickup</callPickupURI>
+            <callPickupListURI>x-cisco-serviceuri-opickup</callPickupListURI>
+            <callPickupGroupURI>x-cisco-serviceuri-gpickup</callPickupGroupURI>
+            <meetMeServiceURI>x-cisco-serviceuri-meetme</meetMeServiceURI>
+            <abbreviatedDialURI>x-cisco-serviceuri-abbrdial</abbreviatedDialURI>
+            <rfc2543Hold>false</rfc2543Hold>
+            <callHoldRingback>2</callHoldRingback>
+            <URIDialingDisplayPreference>1</URIDialingDisplayPreference>
+            <localCfwdEnable>true</localCfwdEnable>
+            <semiAttendedTransfer>true</semiAttendedTransfer>
+            <anonymousCallBlock>2</anonymousCallBlock>
+            <callerIdBlocking>2</callerIdBlocking>
+            <dndControl>0</dndControl>
+            <remoteCcEnable>true</remoteCcEnable>
+            <retainForwardInformation>false</retainForwardInformation>
+        </sipCallFeatures>
+        <sipStack>
+            <sipInviteRetx>6</sipInviteRetx>
+            <sipRetx>10</sipRetx>
+            <timerInviteExpires>180</timerInviteExpires>
+            <timerRegisterExpires>3600</timerRegisterExpires>
+            <timerRegisterDelta>5</timerRegisterDelta>
+            <timerKeepAliveExpires>120</timerKeepAliveExpires>
+            <timerSubscribeExpires>120</timerSubscribeExpires>
+            <timerSubscribeDelta>5</timerSubscribeDelta>
+            <timerT1>500</timerT1>
+            <timerT2>4000</timerT2>
+            <maxRedirects>70</maxRedirects>
+            <remotePartyID>true</remotePartyID>
+            <userInfo>None</userInfo>
+        </sipStack>
+        <autoAnswerTimer>1</autoAnswerTimer>
+        <autoAnswerAltBehavior>false</autoAnswerAltBehavior>
+        <autoAnswerOverride>true</autoAnswerOverride>
+        <transferOnhookEnabled>false</transferOnhookEnabled>
+        <enableVad>false</enableVad>
+        <preferredCodec>none</preferredCodec>
+        <dtmfAvtPayload>101</dtmfAvtPayload>
+        <dtmfDbLevel>3</dtmfDbLevel>
+        <dtmfOutofBand>avt</dtmfOutofBand>
+        <kpml>3</kpml>
+        <phoneLabel></phoneLabel>
+        <stutterMsgWaiting>2</stutterMsgWaiting>
+        <callStats>true</callStats>
+        <offhookToFirstDigitTimer>15000</offhookToFirstDigitTimer>
+        <T302Timer>15000</T302Timer>
+        <silentPeriodBetweenCallWaitingBursts>10</silentPeriodBetweenCallWaitingBursts>
+        <disableLocalSpeedDialConfig>true</disableLocalSpeedDialConfig>
+        <poundEndOfDial>false</poundEndOfDial>
+        <startMediaPort>16384</startMediaPort>
+        <stopMediaPort>32766</stopMediaPort>
+        <startVideoPort>0</startVideoPort>
+        <stopVideoPort>0</stopVideoPort>
+        <organizationTopLevelDomain></organizationTopLevelDomain>
+        <sipLines>
+            <line button="1" lineIndex="1">
+                <featureID>9</featureID>
+                <featureLabel></featureLabel>
+                <proxy>USECALLMANAGER</proxy>
+                <port>5060</port>
+                <name>[SIP USERNAME]</name><!-- Your extension -->
+                <displayName>[SIP DISPLAYNAME]</displayName><!-- Your display name -->
+                <authName>[SIP USERNAME]</authName><!-- Your extension -->
+                <authPassword>[SIP PASSWORD]</authPassword><!-- Your extension password -->
+                <autoAnswer>
+                    <autoAnswerEnabled>2</autoAnswerEnabled>
+                </autoAnswer>
+                <recordingOption>disable</recordingOption>
+                <callWaiting>3</callWaiting>
+                <sharedLine>false</sharedLine>
+                <messageWaitingLampPolicy>3</messageWaitingLampPolicy>
+                <messageWaitingAMWI>0</messageWaitingAMWI>
+                <messagesNumber></messagesNumber>
+                <ringSettingIdle>4</ringSettingIdle>
+                <ringSettingActive>5</ringSettingActive>
+                <contact>44f3ca87-a68d-89a9-28c3-a7d67ffcfc1e</contact>
+                <forwardCallInfoDisplay>
+                    <callerName>false</callerName>
+                    <callerNumber>false</callerNumber>
+                    <redirectedNumber>false</redirectedNumber>
+                    <dialedNumber>false</dialedNumber>
+                </forwardCallInfoDisplay>
+                <maxNumCalls>2</maxNumCalls>
+                <busyTrigger>2</busyTrigger>
+            </line>
+        </sipLines>
+        <externalNumberMask></externalNumberMask>
+        <voipControlPort>5060</voipControlPort>
+        <dscpForAudio  tcl="conversational.audio.aq:admitted">184</dscpForAudio>
+        <dscpVideo  tcl="conversational.video.avconf.aq:admitted">136</dscpVideo>
+        <dscpAudioForVideo  tcl="conversational.audio.avconf.aq:admitted">136</dscpAudioForVideo>
+        <dscpForTelepresence  tcl="conversational.video.immersive.aq:admitted">128</dscpForTelepresence>
+        <dscpAudioForTelepresence  tcl="conversational.audio.immersive.aq:admitted">128</dscpAudioForTelepresence>
+        <dscpForPriorityAudio>180</dscpForPriorityAudio>
+        <dscpForImmediateAudio>176</dscpForImmediateAudio>
+        <dscpForFlashAudio>164</dscpForFlashAudio>
+        <dscpForFlashOverrideAudio>168</dscpForFlashOverrideAudio>
+        <dscpForExecutiveOverrideAudio>168</dscpForExecutiveOverrideAudio>
+        <dscpForPriorityVideo>156</dscpForPriorityVideo>
+        <dscpForImmediateVideo>148</dscpForImmediateVideo>
+        <dscpForFlashVideo>140</dscpForFlashVideo>
+        <dscpForFlashOverrideVideo>132</dscpForFlashOverrideVideo>
+        <dscpForExecutiveOverrideVideo>132</dscpForExecutiveOverrideVideo>
+        <ringSettingBusyStationPolicy>0</ringSettingBusyStationPolicy>
+        <dialTemplate></dialTemplate>
+        <softKeyFile>SKb0ec918f-b9ee-994b-57ae-345883c1fde8.xml</softKeyFile>
+        <alwaysUsePrimeLine>true</alwaysUsePrimeLine>
+        <alwaysUsePrimeLineVoiceMail>false</alwaysUsePrimeLineVoiceMail>
+    </sipProfile>
+    <commonProfile>
+        <phonePassword></phonePassword>
+        <backgroundImageAccess>true</backgroundImageAccess>
+        <callLogBlfEnabled>2</callLogBlfEnabled>
+    </commonProfile>
+    <loadInformation>ATA190.1-2-2-003_SR2-1</loadInformation>
+    <vendorConfig>
+        <autoBarge>0</autoBarge>
+        <enableCdp>1</enableCdp>
+        <enableEC>1</enableEC>
+        <faxMode>0</faxMode>
+        <faxECMDisable>0</faxECMDisable>
+        <faxECDisable>0</faxECDisable>
+        <modemLine>0</modemLine>
+        <faxReturnVoice>0</faxReturnVoice>
+        <faxToneDetectMode>0</faxToneDetectMode>
+        <ivrPassword>24726</ivrPassword>
+        <inputAudioLevel>-3</inputAudioLevel>
+        <outputAudioLevel>-3</outputAudioLevel>
+        <impedance>0</impedance>
+        <callerID>0</callerID>
+        <callSequence>0</callSequence>
+        <muteProgressTone>0</muteProgressTone>
+        <ringtonespecs>
+            <ringtoneSpec index="1">0</ringtoneSpec>
+            <ringtoneSpec index="2">20</ringtoneSpec>
+            <ringtoneSpec index="3">85</ringtoneSpec>
+        </ringtonespecs>
+        <timers>
+            <Timer index="1">100</Timer>
+            <Timer index="2">250</Timer>
+            <Timer index="3">1000</Timer>
+            <Timer index="4">0</Timer>
+            <Timer index="5">5</Timer>
+            <Timer index="6">20</Timer>
+        </timers>
+    </vendorConfig> 
+    <commonConfig>
+    </commonConfig>
+    <enterpriseConfig>
+    </enterpriseConfig>
+    <versionStamp>1772134867-cfd38bc0-fc00-4e1e-ae44-4bd8e7eefbd7</versionStamp>
+    <userLocale>
+        <name>English_United_States</name>
+        <uid>1</uid>
+        <langCode>en_US</langCode>
+        <version>12.0.0.0(1)</version>
+        <winCharSet>iso-8859-1</winCharSet>
+    </userLocale>
+    <networkLocale>United_States</networkLocale>
+    <networkLocaleInfo>
+        <name>United_States</name>
+        <uid>64</uid>
+        <version>12.0.0.0(1)</version>
+    </networkLocaleInfo>
+    <deviceSecurityMode>1</deviceSecurityMode>
+    <sipOAuthMode>0</sipOAuthMode>
+    <dscpForSCCPPhoneConfig>96</dscpForSCCPPhoneConfig>
+    <dscpForSCCPPhoneServices>0</dscpForSCCPPhoneServices>
+    <dscpForCm2Dvce>96</dscpForCm2Dvce>
+    <transportLayerProtocol>4</transportLayerProtocol>
+    <dialToneSetting>1</dialToneSetting>
+    <dndCallAlert>5</dndCallAlert>
+    <phonePersonalization>0</phonePersonalization>
+    <rollover>0</rollover>
+    <singleButtonBarge>0</singleButtonBarge>
+    <joinAcrossLines>0</joinAcrossLines>
+    <autoCallPickupEnable>false</autoCallPickupEnable>
+    <blfAudibleAlertSettingOfIdleStation>0</blfAudibleAlertSettingOfIdleStation>
+    <blfAudibleAlertSettingOfBusyStation>0</blfAudibleAlertSettingOfBusyStation>
+    <capfAuthMode>2</capfAuthMode>
+    <capfList>
+        <capf>
+            <phonePort>3804</phonePort>
+            <processNodeName></processNodeName>
+        </capf>
+    </capfList>
+    <certHash></certHash>
+    <encrConfig>false</encrConfig>
+    <advertiseG722Codec>1</advertiseG722Codec>
+    <mobility>
+        <handoffdn></handoffdn>
+        <dtmfdn></dtmfdn>
+        <ivrdn></ivrdn>
+        <dtmfHoldCode>*81</dtmfHoldCode>
+        <dtmfExclusiveHoldCode>*82</dtmfExclusiveHoldCode>
+        <dtmfResumeCode>*83</dtmfResumeCode>
+        <dtmfTxfCode>*84</dtmfTxfCode>
+        <dtmfCnfCode>*85</dtmfCnfCode>
+    </mobility>
+    <TLSResumptionTimer>3600</TLSResumptionTimer>
+    <userId  serviceProfileFile="SPDefault.cnf.xml">Doorbell</userId>
+    <ownerId  serviceProfileFile="SPDefault.cnf.xml">Doorbell</ownerId>
+    <phoneServices  useHTTPS="true">
+        <provisioning>0</provisioning>
+    </phoneServices>
+</device>

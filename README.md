@@ -238,6 +238,25 @@ I have been doing some tinkering and made a kind of phonebook by accident. If yo
 
 ---
 
+### 13. Notes for ATA190 (and other Cisco ATA) adapters
+The ATA190 devices use a config file almost identical to the regular IP phones, but named `ATA[MAC ADDRESS].cnf.xml` for the first line, and `ATA[Last 10 characters of the MAC address]01.cnf.xml` for the second line. So if, for instance, your ATA190 had a MAC address of `DE:AD:BE:EF:CA:FE`, it would be looking for the configuration files:
+* `ATADEADBEEFCAFE.cnf.xml`
+* `ATAADBEEFCAFE01.cnf.xml`
+
+An example configuration file is found [here](files/ATA(mac_address).cnf.xml)
+
+The only fundamental difference is the addition of the ring tone specs section inside `<vendorconfig>`:
+```
+<ringtonespecs>
+  <ringtoneSpec index="1">0</ringtoneSpec>
+  <ringtoneSpec index="2">20</ringtoneSpec>
+  <ringtoneSpec index="3">85</ringtoneSpec>
+</ringtonespecs>
+```
+Which defines the ring frequency and voltage. The values above are the defaults, and *must* be present in the config file or the device won't start up.
+
+---
+
 ## Contact
 If you have any questions, feel free to reach out at [jakub.bednarczyk@mail.buba.net.pl](mailto:jakub.bednarczyk@mail.buba.net.pl).
 
