@@ -264,6 +264,9 @@ Or open a [GitHub issue](https://github.com/buba0/Cisco-7900-and-8800-series-fre
 
 &copy; 2025 [buba.net.pl](https://buba.net.pl)
 
+## Changing your SEPmac.xml
+Upon making changes to your xml like adding lines etc, be sure to reboot the phone so your new config takes affect or you'll be stuck with the same config
+
 ## Star History
 
 <a href="https://www.star-history.com/#buba0/Cisco-7900-series-freepbx-setup&type=date&legend=bottom-right">
@@ -273,3 +276,4 @@ Or open a [GitHub issue](https://github.com/buba0/Cisco-7900-and-8800-series-fre
    <img alt="Star History Chart" src="https://api.star-history.com/svg?repos=buba0/Cisco-7900-series-freepbx-setup&type=date&legend=bottom-right" />
  </picture>
 </a>
+
